@@ -6,12 +6,10 @@
 	<div class="row">
 		<div class="col-md-2">
 			<ul class="list-group">
-				<li class="list-group-item"><span class="badge">3</span> 日记/随笔
-				</li>
-				<li class="list-group-item"><span class="badge">14</span> 程序员</li>
-				<li class="list-group-item"><span class="badge">12</span> 图片集</li>
-				<li class="list-group-item"><span class="badge">34</span> 资源发布
-				</li>
+				<a:iterator collection="CategoryList" itemId="category">
+					<li class="list-group-item"><span class="badge">${category.count }</span><a href="#">${category.name }</a>
+					</li>
+				</a:iterator>
 			</ul>
 		</div>
 		<div class="col-md-4">

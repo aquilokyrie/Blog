@@ -3,7 +3,9 @@ package com.aquilokyrie.blog;
 import java.lang.reflect.Field;
 
 import com.aquilokyrie.blog.dao.impl.ArticleDAOStringImpl;
+import com.aquilokyrie.blog.dao.impl.QueryDAOStringImpl;
 import com.aquilokyrie.blog.service.impl.ReaderService;
+import com.aquilokyrie.blog.service.impl.StatisticsService;
 import com.aquilokyrie.blog.web.action.ReaderAction;
 
 public class BeanFactory {
@@ -11,7 +13,13 @@ public class BeanFactory {
 	@SuppressWarnings("unused")
 	private static final ArticleDAOStringImpl ARTICLEDAO = new ArticleDAOStringImpl();
 	@SuppressWarnings("unused")
+	private static final QueryDAOStringImpl QUERYDAO = new QueryDAOStringImpl();
+	
+	@SuppressWarnings("unused")
 	private static final ReaderService READERSERVICE = new ReaderService();
+	@SuppressWarnings("unused")
+	private static final StatisticsService STATISTICSSERVICE = new StatisticsService();
+	
 	@SuppressWarnings("unused")
 	private static final ReaderAction READERACTION = new ReaderAction();
 

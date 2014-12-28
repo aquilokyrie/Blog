@@ -2,7 +2,7 @@ package com.aquilokyrie.blog.vo.entity;
 
 import java.io.Serializable;
 
-public class ArticleCategory implements Serializable {
+public class Category implements Serializable {
 
 	/**
 	 * 
@@ -11,32 +11,32 @@ public class ArticleCategory implements Serializable {
 	
 	private Integer id;
 	private String name;
-	private ArticleCategory parent;
+	private Category parent;
 	
-	public ArticleCategory(){
+	public Category(){
 		super();
 	}
 	
-	public ArticleCategory(Integer id){
+	public Category(Integer id){
 		this.id = id;
 	}
 	
 	public Integer getId() {
 		return id;
 	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
 	public String getName() {
 		return name;
+	}
+	public Category getParent() {
+		return parent;
+	}
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public ArticleCategory getParent() {
-		return parent;
-	}
-	public void setParent(ArticleCategory parent) {
+	public void setParent(Category parent) {
 		this.parent = parent;
 	}
 

@@ -2,7 +2,7 @@ package com.aquilokyrie.blog.vo.entity;
 
 import java.io.Serializable;
 
-public class ArticleTag implements Serializable {
+public class Tag implements Serializable {
 
 	/**
 	 * 
@@ -11,7 +11,7 @@ public class ArticleTag implements Serializable {
 
 	private Integer id;
 	private String name;
-	private ArticleTag parent;
+	private Tag parent;
 	
 	public Integer getId() {
 		return id;
@@ -25,10 +25,10 @@ public class ArticleTag implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public ArticleTag getParent() {
+	public Tag getParent() {
 		return parent;
 	}
-	public void setParent(ArticleTag parent) {
+	public void setParent(Tag parent) {
 		this.parent = parent;
 	}
 }

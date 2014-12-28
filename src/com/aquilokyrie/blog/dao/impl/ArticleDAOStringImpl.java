@@ -12,7 +12,7 @@ import com.aquilokyrie.blog.util.log.Logger;
 import com.aquilokyrie.blog.vo.dto.ArticleDTO;
 import com.aquilokyrie.blog.vo.dto.Page;
 import com.aquilokyrie.blog.vo.entity.Article;
-import com.aquilokyrie.blog.vo.entity.ArticleCategory;
+import com.aquilokyrie.blog.vo.entity.Category;
 import com.aquilokyrie.blog.vo.entity.User;
 
 /**
@@ -196,7 +196,7 @@ public class ArticleDAOStringImpl implements IArticleDAO {
 			result.setContent(rs.getString("content"));
 			result.setCreateDate(rs.getTimestamp("a_date"));
 			
-			result.setCategory(new ArticleCategory(rs.getInt("c_id")));
+			result.setCategory(new Category(rs.getInt("c_id")));
 			result.getCategory().setName(rs.getString("name"));
 			
 			result.setWriter(new User(rs.getInt("u_id")));

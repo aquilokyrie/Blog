@@ -23,8 +23,8 @@ public class Article implements Serializable {
 	private User writer;
 	private Integer isDeleted;
 	
-	private ArticleCategory category;
-	private Set<ArticleTag> tags;
+	private Category category;
+	private Set<Tag> tags;
 	
 	public Article(){
 		super();
@@ -34,7 +34,7 @@ public class Article implements Serializable {
 		this.title = title;
 		this.content = content;
 		
-		this.category = new ArticleCategory(categoryId);
+		this.category = new Category(categoryId);
 		this.writer = new User(writerId);
 	}
 
@@ -70,11 +70,11 @@ public class Article implements Serializable {
 		this.createDate = createDate;
 	}
 
-	public ArticleCategory getCategory() {
+	public Category getCategory() {
 		return category;
 	}
 
-	public void setCategory(ArticleCategory category) {
+	public void setCategory(Category category) {
 		this.category = category;
 	}
 
@@ -86,11 +86,11 @@ public class Article implements Serializable {
 		this.writer = writer;
 	}
 
-	public Set<ArticleTag> getTags() {
+	public Set<Tag> getTags() {
 		return tags;
 	}
 
-	public void setTags(Set<ArticleTag> tags) {
+	public void setTags(Set<Tag> tags) {
 		this.tags = tags;
 	}
 
